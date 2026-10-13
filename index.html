@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module"
+            src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background-image:
+        linear-gradient(rgba(20, 5, 15, 0.3),
+                        rgba(20, 5, 15, 0.3)),
+        url("https://i.pinimg.com/1200x/c1/c3/41/c1c341b91d7ac53dc42a5c50cc156cb0.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+    max-width: calc(100% - 40px);
+    padding: 30px;
+    box-sizing: border-box;
+
+    background-color: rgba(255, 248, 237, 0.96);
+    border: 2px solid #d6b56d;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #0006;
+}
+
+h1, h4 {
+    text-align: center;
+    color: #782b45;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #542033;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #d5b8a7;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #782b45;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #572034;
+}
+
+#output1 {
+    margin-top: 15px;
+    text-align: center;
+    color: #542033;
+}
+    </style>
+        
+    <title>Seatwork 1</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Theater Club</h1>
+        <h4>Club Acceptance</h4>
+
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name"
+               placeholder="Enter first name">
+
+        <br><br>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name"
+               placeholder="Enter last name">
+
+        <br><br>
+
+        <button py-click="check_membership">Check</button>
+
+        <div id="output1"></div>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
